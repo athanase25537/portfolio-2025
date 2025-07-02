@@ -1,0 +1,28 @@
+.my-card {
+    border-bottom: 1px solid var(--bs-secondary);
+    h1 {
+        
+    }
+
+    span {
+        small {
+            color: var(--bs-secondary);
+            filter: brightness(2.4);
+        }
+    }
+
+    span:hover {
+        filter: none;
+        background: var(--bs-third);
+    }
+
+    h2 {
+        color: var(--bs-secondary);
+        filter: brightness(2.4);
+    }
+
+}
+
+.last {
+    border: none;
+}

@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --bs-main: #052f60;
+    --bs-secondary: #026294;
+    --bs-third: #200838;
+    --bs-fourth: #194375;
+    --bs-fifth: #122456
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(75deg, var(--bs-main) 30%, var(--bs-third));
+}
+
+.my-btn {
+    background-color: var(--bs-third);
+    transition: background .3s ease;
+    span {
+        filter: brightness(2.4);
+        color: var(--bs-secondary);
+    }
+}
+
+.my-btn:hover {
+    filter: brightness(2.4);
+    background-color: var(--bs-secondary);
+
+    span {
+        color: black;
+    }
+}

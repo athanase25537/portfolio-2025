@@ -1,0 +1,11 @@
+.my-card {
+    background-color: var(--bs-fifth);
+    border: 1px solid var(--bs-secondary);
+
+    h3 {
+        span {
+            filter: brightness(2.4);
+            color: var(--bs-secondary)
+        }
+    }
+}

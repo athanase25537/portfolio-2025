@@ -1,0 +1,32 @@
+.container {
+    margin-top: 15%;
+    color: white;
+    box-sizing: border-box;
+    height: auto;
+    
+    h1 {
+        position: relative;
+
+        .line {
+            position: absolute;
+            display: flex;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            gap: 10px;
+
+            span {
+                display: block;
+                height: 3px;
+                width: 50px;
+            }
+
+            span.unique {
+                width: 30px;
+                filter: brightness(2.4);
+                background-color: var(--bs-secondary);
+            }
+
+        }
+    }
+}

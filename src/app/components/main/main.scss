@@ -1,0 +1,52 @@
+.main {
+    height: 100vh;
+    padding-top: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    .text {
+        small {
+            color: var(--bs-secondary);
+            filter: brightness(2.4);
+            display: flex;
+            align-items: center;
+
+            span {
+                display: block;
+                width: 50px;
+                height: 2px;
+                background-color: var(--bs-secondary);
+            }
+        }
+
+        .me {
+            strong {
+                color: var(--bs-secondary);
+                filter: brightness(2.4);
+            }
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+
+            i {
+                color: var(--bs-third);
+            }
+
+            i:hover {
+                filter: brightness(2.4);
+                color: var(--bs-secondary);
+            }
+        }
+        
+    }
+
+    .img {
+        width: 300px;
+        height: 400px;
+        filter: brightness(1.4);
+        border: 1px solid var(--bs-secondary);
+    }
+}
