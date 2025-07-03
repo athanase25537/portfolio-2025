@@ -1,31 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardResumeModel } from '../../models/cardResumeModel';
 import { CardResume } from "../card-resume/card-resume";
+import { Myresume } from '../../services/myresume';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-school-resume',
-  imports: [CardResume],
+  imports: [CardResume, CommonModule],
   templateUrl: './school-resume.html',
   styleUrl: './school-resume.scss'
 })
-export class SchoolResume {
-  card1 = new CardResumeModel(
-    "Bachelor lv 1 essia",
-    2021,
-    2022,
-    "intitut superieur polytechnique de madagasar",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
-    false
-  )
+export class SchoolResume implements OnInit {
 
-  card2 = new CardResumeModel(
-    "Bachelor lv 2 essia",
-    2023,
-    2024,
-    "intitut superieur polytechnique de madagasar",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
-    true
-  )
+  educationCards!: CardResumeModel[];
+  experienceCards!: CardResumeModel[]; 
 
+  type!: string; // edu | exp | ski
 
+  constructor(private resumeService: Myresume) { }
+
+  ngOnInit(): void {
+    this.type = "exp"
+    this.educationCards = this.resumeService.getEducationCards();
+    this.experienceCards = this.resumeService.getExperienceCards();
+  }
+
+  onClick(val: string) {
+    this.type = val;
+  }
+  
 }

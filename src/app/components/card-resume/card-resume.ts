@@ -13,8 +13,8 @@ export class CardResume {
   card = input<CardResumeModel>(
     new CardResumeModel(
       "Bachelor lv 1 essia",
-      2021,
-      2022,
+      "2021",
+      "2022",
       "intitut superieur polytechnique de madagasar",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
       false

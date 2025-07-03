@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Card } from "../card/card";
 import { CardModel } from '../../models/cardModel';
+import { Myservice } from '../../services/myservice';
 
 @Component({
   selector: 'app-myservices',
@@ -9,22 +10,15 @@ import { CardModel } from '../../models/cardModel';
   templateUrl: './myservices.html',
   styleUrl: './myservices.scss'
 })
-export class Myservices {
-  card1 = new CardModel(
-        'fa-brands fa-angular',
-      'Website test',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, magnam!'
-  )
+export class Myservices implements OnInit{
+  
+  cards!: CardModel[];
 
-  card2 = new CardModel(
-    'fa-brands fa-angular',
-  'Website angular',
-  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, magnam!'
-  )
+  constructor(private cardService: Myservice) { }
 
-  card3 = new CardModel(
-    'fa-brands fa-angular',
-  'Website django',
-  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, magnam!'
-  )
+  ngOnInit(): void {
+    this.cards = this.cardService.getCards();
+  }
+
+  
 }

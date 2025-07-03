@@ -1,11 +1,25 @@
 .my-card {
     background-color: var(--bs-fifth);
     border: 1px solid var(--bs-secondary);
+    min-height: 17vh;
+    overflow-y: hidden;
 
     h3 {
         span {
             filter: brightness(2.4);
             color: var(--bs-secondary)
         }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .my-card {
+        min-height: 26vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .my-card {
+        min-height: 15vh;
     }
 }

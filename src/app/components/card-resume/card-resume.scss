@@ -26,3 +26,11 @@
 .last {
     border: none;
 }
+
+@media screen and (max-width: 380px) {
+    .my-card {
+        .fs-5 {
+            font-size: 1rem !important;
+        }
+    }
+}
