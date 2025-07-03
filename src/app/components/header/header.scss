@@ -10,13 +10,28 @@ header {
     background-color: var(--bs-fourth);
     color: white;
     z-index: 3;
+
+    i {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 5;
+        display: none;
+    }
+
+    i:hover {
+        cursor: pointer;
+    }
+
     .logo {
-        font-size: 1.5em;
+        font-size: 1.1em;
+
         span {
             filter: brightness(2.4);
             color: var(--bs-secondary);
         }
     }
+
     ul {
         display: flex;
         align-items: center;
@@ -27,6 +42,91 @@ header {
 
         li {
             padding: 15px 0;
+            transition: background .3s ease-in-out;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        li.active, li:hover {
+            cursor: pointer;
+            background-color: var(--bs-secondary);
+            filter: brightness(2.4);
+
+            a {
+                color: black;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    header {
+        ul {
+            gap: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    header {
+        padding: 0 100px;
+
+        ul {
+            gap: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    header {
+        padding: 0 30px;
+
+        ul {
+            gap: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 10px 0;
+        transition: height .3s ease-in-out;
+        
+        i {
+            display: block;
+        }
+
+        .logo {
+            margin-left: 10px;
+        }
+    
+        
+        ul {
+            flex-direction: column;
+            justify-content: center;
+            opacity: 1;
+            width: 100%;
+            position: absolute;
+            top: 46px;
+            height: 94vh;
+            background-color: var(--bs-fourth);
+            transition: margin .3s ease-in-out;
+            margin-left: 100%;
+        }
+    }
+
+    header.show {
+        ul {
+            margin-left: 0;
         }
     }
 }

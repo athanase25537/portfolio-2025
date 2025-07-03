@@ -3,7 +3,7 @@
     color: white;
     box-sizing: border-box;
     height: auto;
-    
+
     h1 {
         position: relative;
 
@@ -28,5 +28,119 @@
             }
 
         }
+    }
+
+    .contact {
+        background-color: var(--bs-fifth);
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+
+        .info {
+            ul {
+                list-style: none;
+    
+                strong {
+                    font-weight: normal;
+                }
+            }
+    
+            .contact-info {
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 35px;
+                    color: rgb(197, 196, 196);
+                }
+            }
+    
+            .social {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                a:hover {
+                    filter: brightness(2.4);
+                    color: var(--bs-secondary);
+                }
+            }
+        }
+    
+        form {
+            width: 45%;
+            border: 1px solid var(--bs-secondary);
+            background-color: rgba(5, 47, 95, 0.4392156863);
+            filter: brightness(1.4);
+            padding: 3rem;
+
+            h1 {
+                span {
+                    color: var(--bs-secondary);
+                    filter: brightness(2.4);
+                }
+            }
+            input, textarea {
+                background: none;
+                border: 1px solid var(--bs-secondary);
+                color: white;
+            }
+    
+            input::placeholder, textarea::placeholder {
+                color: rgba(194, 191, 191, 0.664);
+            }
+    
+            .my-btn {
+                transition: background .3s ease-in-out;
+                span {
+                    color: var(--bs-secondary);
+                    filter: brightness(2.4);
+                }
+            }
+    
+            .my-btn:hover {
+                span {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .container {
+
+        .contact {
+            flex-direction: column;
+            
+            h2 {
+                text-align: center;
+            }
+
+            .info {
+                width: 100%;
+                margin-bottom: 5%;
+            }
+
+            form {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .container {
+        font-size: .8rem;
+
+        .contact {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            form {
+                padding: 3rem 1rem;
+            }
+        }
+
     }
 }

@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     color: white;
+
     .text {
         small {
             color: var(--bs-secondary);
@@ -48,5 +49,20 @@
         height: 400px;
         filter: brightness(1.4);
         border: 1px solid var(--bs-secondary);
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .main {
+        flex-direction: column-reverse;
+        padding-top: 25%;
+        
+        .img {
+            width: 100%;
+        }
+
+        .text {
+            margin-top: 15%;
+        }
     }
 }

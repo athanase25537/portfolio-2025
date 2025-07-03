@@ -1,14 +1,20 @@
 
-<header>
+<header [ngClass]="{'show': show}">
+    @if(show) {
+        <i (click)="onClick()" class="fs-1 fa-solid fa-xmark"></i>
+    } @else {
+        <i (click)="onClick()" class="fs-1 fa-solid fa-bars"></i>
+    }
+
     <div class="logo">
         <span>My</span> Logo
     </div>
 
-    <ul>
-        <li><a href=""></a>Home</li>
-        <li><a href=""></a>About</li>
-        <li><a href=""></a>Services</li>
-        <li><a href=""></a>Portfolio</li>
-        <li><a href=""></a>Contact</li>
+    <ul class="py-2">
+        <li class="py-2 px-3 active rounded-pill"><a href="">Home</a></li>
+        <li class="py-2 px-3 rounded-pill"><a href="">About</a></li>
+        <li class="py-2 px-3 rounded-pill"><a href="">Services</a></li>
+        <li class="py-2 px-3 rounded-pill"><a href="">Portfolio</a></li>
+        <li class="py-2 px-3 rounded-pill"><a href="">Contact</a></li>
     </ul>
 </header>
