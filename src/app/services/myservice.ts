@@ -10,7 +10,7 @@ export class Myservice {
     new CardModel(
       'fa-solid fa-code',
       'Dev Backend',
-      'Création et maintenance d\'API robustes avec FastAPI ou PHP natif, intégration de protocoles comme OCPP.'
+      'Création et maintenance d\'API robustes avec FastAPI ou PHP, intégration de protocoles comme OCPP.'
     ),
 
     new CardModel(
@@ -22,7 +22,7 @@ export class Myservice {
     new CardModel(
       'fa-solid fa-robot',
       'M. Learning',
-      'Conception de modèles prédictifs avec Python, Scikit-learn, TensorFlow et XGBoost.'
+      'Conception de modèles prédictifs de Machine Learning avec Python, Scikit-learn, TensorFlow et XGBoost, Pytorch.'
     ),
 
     new CardModel(

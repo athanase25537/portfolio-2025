@@ -13,6 +13,10 @@ body {
     background: linear-gradient(75deg, var(--bs-main) 30%, var(--bs-third));
 }
 
+.container {
+    padding-top: 8%;
+}
+
 .my-btn {
     background-color: var(--bs-third);
     transition: background .3s ease;
@@ -29,4 +33,10 @@ body {
     span {
         color: black;
     }
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        padding-top: 11%;
+    }   
 }

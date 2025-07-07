@@ -9,9 +9,14 @@ import { Component } from '@angular/core';
 })
 export class Header {
   show: boolean = false;
-
+  activeLink = "home";
   onClick() {
     console.log(this.show)
     this.show = !this.show;
+  }
+
+
+  onClickNav(value: string): void {
+    this.activeLink = value;
   }
 }

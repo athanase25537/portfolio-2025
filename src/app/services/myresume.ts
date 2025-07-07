@@ -8,6 +8,23 @@ export class Myresume {
 
   private edcuationCards: CardResumeModel[] = [
     new CardResumeModel(
+      "Bachelor lv 3 essia",
+      "2023",
+      "2024",
+      "intitut superieur polytechnique de madagasar",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
+      true
+    ),
+    new CardResumeModel(
+      "Preparatory year",
+      "Jan 21",
+      "Sep 21",
+      "Program SESAME",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
+      false
+    ),  
+
+    new CardResumeModel(
       "Baccalaureat",
       "2019",
       "2020",
@@ -16,40 +33,9 @@ export class Myresume {
       false
     ),
 
-    new CardResumeModel(
-      "Preparatory year",
-      "Jan 21",
-      "Sep 21",
-      "Program SESAME",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
-      false
-    ),
-    new CardResumeModel(
-      "Bachelor lv 1 essia",
-      "2021",
-      "2022",
-      "intitut superieur polytechnique de madagasar",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
-      true
-    ),
 
-    new CardResumeModel(
-      "Bachelor lv 2 essia",
-      "2022",
-      "2023",
-      "intitut superieur polytechnique de madagasar",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
-      true
-    ),
 
-    new CardResumeModel(
-      "Bachelor lv 3 essia",
-      "2023",
-      "2024",
-      "intitut superieur polytechnique de madagasar",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
-      true
-    ),
+
   ];
 
   getEducationCards(): CardResumeModel[] {
@@ -78,7 +64,7 @@ export class Myresume {
     new CardResumeModel(
       "Stagiaire Backend",
       "Fev 25",
-      "Jui 22",
+      "Jui 25",
       "Oceantrade du Group Viseo",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
       false

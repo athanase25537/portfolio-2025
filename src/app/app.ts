@@ -7,10 +7,11 @@ import { CardResume } from "./components/card-resume/card-resume";
 import { SchoolResume } from "./components/school-resume/school-resume";
 import { Portfolio } from "./components/portfolio/portfolio";
 import { Contact } from "./components/contact/contact";
+import { Techno } from "./components/techno/techno";
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Main, Card, Myservices, CardResume, SchoolResume, Portfolio, Contact],
+  imports: [Header, Main, Card, Myservices, CardResume, SchoolResume, Portfolio, Contact, Techno],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

@@ -40,24 +40,19 @@ header {
         padding: 0;
         gap: 50px;
 
-        li {
-            padding: 15px 0;
-            transition: background .3s ease-in-out;
+        a {
+            text-decoration: none;
+            color: white;
+            transition: color .3s ease-in-out;
 
-            a {
-                color: white;
+            li {
                 text-decoration: none;
             }
         }
 
-        li.active, li:hover {
-            cursor: pointer;
-            background-color: var(--bs-secondary);
+        a.active, a:hover {
             filter: brightness(2.4);
-
-            a {
-                color: black;
-            }
+            color: var(--bs-secondary);
         }
     }
 }
@@ -117,7 +112,7 @@ header {
             width: 100%;
             position: absolute;
             top: 46px;
-            height: 94vh;
+            height: 96vh;
             background-color: var(--bs-fourth);
             transition: margin .3s ease-in-out;
             margin-left: 100%;

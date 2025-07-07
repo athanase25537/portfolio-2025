@@ -7,14 +7,13 @@
     }
 
     <div class="logo">
-        <span>My</span> Logo
+        <span>Happy</span> Coder
     </div>
 
     <ul class="py-2">
-        <li class="py-2 px-3 active rounded-pill"><a href="">Home</a></li>
-        <li class="py-2 px-3 rounded-pill"><a href="">About</a></li>
-        <li class="py-2 px-3 rounded-pill"><a href="">Services</a></li>
-        <li class="py-2 px-3 rounded-pill"><a href="">Portfolio</a></li>
-        <li class="py-2 px-3 rounded-pill"><a href="">Contact</a></li>
+        <a href="#home" (click)="onClickNav('home')" [ngClass]="{'active': activeLink == 'home'}"><li class="p-0 active rounded-pill">Home</li></a>
+        <a href="#services" (click)="onClickNav('services')" [ngClass]="{'active': activeLink == 'services'}"><li class="py-2 px-3 rounded-pill">Services</li></a>
+        <a href="#portfolio" (click)="onClickNav('portfolio')" [ngClass]="{'active': activeLink == 'portfolio'}"><li class="py-2 px-3 rounded-pill">Portfolio</li></a>
+        <a href="#contact" (click)="onClickNav('contact')" [ngClass]="{'active': activeLink == 'contact'}"><li class="py-2 px-3 rounded-pill">Contact</li></a>
     </ul>
 </header>

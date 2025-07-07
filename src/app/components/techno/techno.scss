@@ -1,9 +1,10 @@
 .container {
     margin-top: 15%;
     color: white;
-
+    
     h1 {
         position: relative;
+        margin-bottom: 7%;
 
         .line {
             position: absolute;
@@ -27,30 +28,43 @@
 
         }
     }
+
     .row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
 
-        .col-4 {
-            height: fit-content;
+        i {
+            width: fit-content;
+            font-size: 5rem;
+            animation: clign 2s infinite;
+        }
+
+        svg {
+            width: fit-content;
+            animation: clign 2s infinite;
+        }
+
+        i:hover,
+        svg:hover {
+            color: var(--bs-secondary);
+            filter: brightness(2.4);
+            cursor: pointer;
+            scale: 1.04;
         }
     }
 }
 
-@media screen and (max-width: 767px) {
-    .container {
-        .row {
-            .col-4 {
-                width: 50%;
-            }
-        }
+@keyframes clign {
+    0% {
+        scale: 1;
     }
-}
 
-@media screen and (max-width: 492px) {
-    .container {
-        .row {
-            .col-4 {
-                width: 100%;
-            }
-        }
+    50% {
+        scale: 1.05;
+    }
+
+    100% {
+        scale: 1;
     }
 }
