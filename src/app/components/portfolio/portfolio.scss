@@ -38,50 +38,8 @@
         gap: 20px;
         margin: 0 auto;
 
-        div {
-            transition: scale .3s ease-in-out;
-            position: relative;
-            margin: 0;
-            padding: 0;
+        .content {
             width: 30%;
-            height: fit-content;
-            overflow: hidden;
-            
-            .cover {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: #0000004f;
-                opacity: 1;
-                transition: opacity .3s ease-in-out;
-            }
-
-            p {
-                color: black;
-
-                a {
-                    color: black;
-                    border: 1px solid black;
-                }
-            }
-
-            img {
-                width: 100%;
-                height: 150px;
-                object-fit: contain; 
-                display: block;
-            }
-        }
-        
-        div:hover {
-            scale: 1.03;
-            cursor: pointer;
-
-            .cover {
-                opacity: 0;
-            }
         }
     }
 }
@@ -89,7 +47,7 @@
 @media screen and (max-width: 991px) {
     .container {
         .row {
-            div {
+            .content {
                 width: 45%;
             }
         }
@@ -98,7 +56,7 @@
 @media screen and (max-width: 767px) {
     .container {
         .row {
-            div {
+            .content {
                 width: 100%;
             }
         }

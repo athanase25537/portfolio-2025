@@ -5,7 +5,7 @@
             <ul class="py-2 px-0">
                 <li (click)="onClick('exp')" [ngClass]="{'active': type == 'exp'}" class="rounded-pill px-4 py-2"><a href="#experiences"><span>Experiences</span></a></li>
                 <li (click)="onClick('edu')" [ngClass]="{'active': type == 'edu'}" class="rounded-pill px-4 py-2"><a href="#educations"><span>Educations</span></a></li>
-                <li (click)="onClick('ski')" [ngClass]="{'active': type == 'ski'}" class="rounded-pill px-4 py-2"><a href="#skills"><span>Awards</span></a></li>
+                <li (click)="onClick('cert')" [ngClass]="{'active': type == 'cert'}" class="rounded-pill px-4 py-2"><a href="#certificats"><span>Certificats</span></a></li>
             </ul>
         </div>
 
@@ -22,7 +22,11 @@
                 </div>
             }
         } @else {
-            <p>skills</p>
+            @for(card of certificatCards; track $index) {
+                <div class="content">
+                    <app-card-resume [card]="card"/>
+                </div>
+            }
         }
     </div>
 </div>

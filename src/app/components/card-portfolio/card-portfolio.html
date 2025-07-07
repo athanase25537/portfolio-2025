@@ -1,0 +1,15 @@
+<div class="container bg-light item-4">
+    <div class="cover"></div>
+    <img [src]="card().imgUrl"/>
+    <p class="m-2">{{ card().description }}</p>
+    <p class="m-2">
+        <a [href]="card().githubLink" class="btn me-2" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            Github
+        </a>
+        <a [href]="card().demoLink" class="btn px-3 me-2" target="_blank">
+            <i class="fa-solid fa-play"></i>
+            Demo
+        </a>
+    </p>
+</div>

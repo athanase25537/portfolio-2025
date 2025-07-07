@@ -50,6 +50,8 @@
         height: 400px;
         filter: brightness(1.4);
         border: 1px solid var(--bs-secondary);
+        background-image: url('../../../../public/assets/imgs/main.png');
+        background-size: cover;
     }
 }
 

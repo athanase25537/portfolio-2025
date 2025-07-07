@@ -36,13 +36,15 @@
 
         i {
             width: fit-content;
-            font-size: 5rem;
+            font-size: 3.5rem;
             animation: clign 2s infinite;
         }
 
         svg {
             width: fit-content;
             animation: clign 2s infinite;
+            width: 80px;
+            height: 80px;
         }
 
         i:hover,
@@ -66,5 +68,13 @@
 
     100% {
         scale: 1;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .container {
+        .row {
+            justify-content: space-between;
+        }
     }
 }

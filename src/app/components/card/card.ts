@@ -13,8 +13,8 @@ export class Card {
   card = input<CardModel>(
     new CardModel(
       'fa-brands fa-angular',
-    'Website Creator',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, magnam!'
+      'Website Creator',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, magnam!'
     )
   );
 }

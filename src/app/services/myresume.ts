@@ -8,19 +8,19 @@ export class Myresume {
 
   private edcuationCards: CardResumeModel[] = [
     new CardResumeModel(
-      "Bachelor lv 3 essia",
-      "2023",
+      "Licence en informatique",
+      "2021",
       "2024",
       "intitut superieur polytechnique de madagasar",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
-      true
+      "Cours d'informatique où j'ai pu réalisé des projets autant personnels que par équipe.",
+      false
     ),
     new CardResumeModel(
-      "Preparatory year",
+      "Annéé Préparatoire",
       "Jan 21",
       "Sep 21",
-      "Program SESAME",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
+      "Programme SESAME",
+      "on a fait de l'orientation scolaire, professionnelle, développement personnel, renforcement scolaire.",
       false
     ),  
 
@@ -29,7 +29,7 @@ export class Myresume {
       "2019",
       "2020",
       "Lycee Presentation de Marie",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
+      "Baccalauréat série C avec mention Bien.",
       false
     ),
 
@@ -48,7 +48,7 @@ export class Myresume {
       "Fev 25",
       "Mai 25",
       "Freelance",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
+      "Réalisation d'une application de gestion de rendez-vous et de l'evolution de dossier pour un avocat.",
       false
     ),
 
@@ -57,7 +57,7 @@ export class Myresume {
       "Jan 25",
       "Avr 25",
       "Full remote",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
+      "Site de gestion d'un bien immobilier (bailonline). Création des biens, abonnement, paiement loyer,...",
       false
     ),
 
@@ -66,7 +66,7 @@ export class Myresume {
       "Fev 25",
       "Jui 25",
       "Oceantrade du Group Viseo",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
+      "Création d'api et maintenance d'une application CSMS. Traitement en temps réel avec Websocket et rabbitMQ.",
       false
     ),
 
@@ -75,8 +75,8 @@ export class Myresume {
       "Oct 21",
       "Nov 21",
       "ingenosya madagasar",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla.",
-      true
+      "Initiation et découverte du langage PHP et réalisation d'un mini projet.",
+      false
     ),
   ];
 
@@ -84,5 +84,55 @@ export class Myresume {
     return this.experienceCards;
   }
 
+  private certificatCards: CardResumeModel[] = [
+    new CardResumeModel(
+      "Angular Basic",
+      "Juin 25",
+      "Juin 25",
+      "hackerrank",
+      "Maitrise du fondamentale d'angular: component, services, event, data binding,...",
+      false
+    ),
+
+    new CardResumeModel(
+      "ML intermédiaire",
+      "Juin 25",
+      "",
+      "Kaggle",
+      "Amélioration de la performance de la création de modèle: cross validation, XGBoost, ...",
+      false
+    ),
+
+    new CardResumeModel(
+      "Machine Learning intro",
+      "Avr 25",
+      "",
+      "Kaggle",
+      "Premier pas dans la machine learning: les bases de ML,regression linéaire,...",
+      false
+    ),
+
+    new CardResumeModel(
+      "Python",
+      "Avr 25",
+      "",
+      "Kaggle",
+      "Base du langage python: variable, fonction, type des données,...",
+      false
+    ),
+
+    new CardResumeModel(
+      "SQL intermédiaire",
+      "Mar 25",
+      "",
+      "Hackerrank",
+      "Compétences intermédiaires en SQL acquises via des exercices et certifications sur Hackerrank.",
+      false
+    ),
+  ]
+
+  getCertificatCards(): CardResumeModel[] {
+    return this.certificatCards;
+  }
   constructor() { }
 }
