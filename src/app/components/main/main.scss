@@ -33,10 +33,6 @@
             display: flex;
             align-items: center;
 
-            i {
-                color: var(--bs-third);
-            }
-
             i:hover {
                 filter: brightness(2.4);
                 color: var(--bs-secondary);
