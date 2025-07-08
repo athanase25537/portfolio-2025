@@ -96,7 +96,7 @@ export class Myresume {
 
     new CardResumeModel(
       "ML intermédiaire",
-      "Juin 25",
+      "Mai 25",
       "",
       "Kaggle",
       "Amélioration de la performance de la création de modèle: cross validation, XGBoost, ...",
