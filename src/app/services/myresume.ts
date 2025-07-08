@@ -88,7 +88,7 @@ export class Myresume {
     new CardResumeModel(
       "Angular Basic",
       "Juin 25",
-      "Juin 25",
+      "",
       "hackerrank",
       "Maitrise du fondamentale d'angular: component, services, event, data binding,...",
       false
