@@ -11,7 +11,7 @@ export class PortfolioService {
   myPortfolio: cardPortfolioModel[] = [
     new cardPortfolioModel(
       "assets/imgs/rendezvous.png",
-      "Site de gestion de rendezvous et evolution de dossier pour un avocat.",
+      "Site de gestion de rendez-vous et évolution de dossier pour un avocat.",
       "https://github.com/athanase25537/rendezvous",
       "https://rendezvous-1-k3uj.onrender.com"
     ),
@@ -25,14 +25,14 @@ export class PortfolioService {
 
     new cardPortfolioModel(
       "assets/imgs/mvola.png",
-      "Une documentation clair et simple sur l'utilisation de l'api MVola.",
+      "Une documentation claire et simple sur l'utilisation de l'API MVola.",
       "https://github.com/athanase25537/mvolaapi",
       "https://mvolaapi.onrender.com/"
     ),
 
     new cardPortfolioModel(
       "assets/imgs/api.png",
-      "API sur le modele de prédiction de prix d'un immobilier (California housing).",
+      "API sur le modèle de prédiction de prix d'un immobilier (California housing).",
       "https://github.com/athanase25537/california_housing",
       ""
     ),
@@ -46,7 +46,7 @@ export class PortfolioService {
 
     new cardPortfolioModel(
       "assets/imgs/quiz.png",
-      "Une appication de quiz simple comportant de l'histoire et de la logique.",
+      "Une application de quiz simple comportant de l'histoire et de la logique.",
       "https://github.com/athanase25537/quiz",
       ""
     )

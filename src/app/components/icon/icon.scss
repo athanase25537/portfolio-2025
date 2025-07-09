@@ -1,0 +1,39 @@
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    animation: clign 2s infinite;
+
+    i {
+        width: fit-content;
+        font-size: 3.5rem;
+    }
+
+    div {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+div:hover {
+    color: var(--bs-secondary);
+    filter: brightness(2.4);
+    cursor: pointer;
+    scale: 1.04;
+}
+
+@keyframes clign {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.09;
+    }
+
+    100% {
+        scale: 1;
+    }
+}

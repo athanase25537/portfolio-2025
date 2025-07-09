@@ -8,6 +8,13 @@
     .text {
         width: 50%;
         
+        p {
+            .collab {
+                color: var(--bs-secondary);
+                filter: brightness(2.4);
+            }
+        }
+        
         small {
             color: var(--bs-secondary);
             filter: brightness(2.4);

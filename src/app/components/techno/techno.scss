@@ -30,44 +30,15 @@
     }
 
     .row {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        place-items: center;
+        gap: 20px;
 
-        i {
+        .icon {
             width: fit-content;
-            font-size: 3.5rem;
-            animation: clign 2s infinite;
         }
-
-        svg {
-            width: fit-content;
-            animation: clign 2s infinite;
-            width: 80px;
-            height: 80px;
-        }
-
-        i:hover,
-        svg:hover {
-            color: var(--bs-secondary);
-            filter: brightness(2.4);
-            cursor: pointer;
-            scale: 1.04;
-        }
-    }
-}
-
-@keyframes clign {
-    0% {
-        scale: 1;
-    }
-
-    50% {
-        scale: 1.05;
-    }
-
-    100% {
-        scale: 1;
     }
 }
 

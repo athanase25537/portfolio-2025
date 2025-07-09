@@ -11,12 +11,12 @@ export class Myresume {
       "Licence en informatique",
       "2021",
       "2024",
-      "intitut superieur polytechnique de madagasar",
-      "Cours d'informatique où j'ai pu réalisé des projets autant personnels que par équipe.",
+      "institut supérieur polytechnique de madagasar",
+      "Cours d'informatique où j'ai pu réalisé des projets autant personnel que par équipe.",
       false
     ),
     new CardResumeModel(
-      "Annéé Préparatoire",
+      "Année Préparatoire",
       "Jan 21",
       "Sep 21",
       "Programme SESAME",
@@ -28,7 +28,7 @@ export class Myresume {
       "Baccalaureat",
       "2019",
       "2020",
-      "Lycee Presentation de Marie",
+      "Lycée Présentation de Marie",
       "Baccalauréat série C avec mention Bien.",
       false
     ),
@@ -66,7 +66,7 @@ export class Myresume {
       "Fev 25",
       "Jui 25",
       "Oceantrade du Group Viseo",
-      "Création d'api et maintenance d'une application CSMS. Traitement en temps réel avec Websocket et rabbitMQ.",
+      "Création d'API et maintenance d'une application CSMS. Traitement en temps réel avec Websocket et rabbitMQ.",
       false
     ),
 
@@ -90,7 +90,7 @@ export class Myresume {
       "Juin 25",
       "",
       "hackerrank",
-      "Maitrise du fondamentale d'angular: component, services, event, data binding,...",
+      "Maîtrise du fondamental d'angular: component, services, event, data binding,...",
       false
     ),
 

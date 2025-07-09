@@ -1,0 +1,9 @@
+<div>
+    @if(icon().isSvg) {
+        <div [innerHTML]="icon().iconClass"></div>
+    }@else {
+        <i class="fs-1 {{ icon().iconClass}}"></i>
+    }
+    
+    <span>{{ icon().legend | titlecase}}</span>
+</div>
