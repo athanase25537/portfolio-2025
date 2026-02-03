@@ -1,10 +1,10 @@
-<div id="services" class="container">
-    <h1 class="fs-4 fw-bold text-center mb-5">What I do<div class="line"><span class="bg-secondary rounded"></span><span class="unique rounded"></span><span class="bg-secondary rounded"></span></div></h1>
-    <div class="row">
+<section id="services" class="section container services">
+    <h2 class="section-title" data-reveal>What I <span>Do</span></h2>
+    <div class="row services-grid">
         @for(card of cards; track $index) {
-            <div class="col-4 mb-3">
+            <div class="col-4 mb-3" data-reveal [style.--delay]="($index * 0.08) + 's'">
                 <app-card [card]="card"/>
             </div>
         }
     </div>
-</div>
+</section>
