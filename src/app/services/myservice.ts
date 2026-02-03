@@ -22,7 +22,7 @@ export class Myservice {
     new CardModel(
       'fa-solid fa-robot',
       'M. Learning',
-      'Conception de modèles prédictifs de Machine Learning avec Python, Scikit-learn, TensorFlow et XGBoost, Pytorch.'
+      'Conception de modèles prédictifs de Machine Learning avec Python, Scikit-learn, TensorFlow et Pytorch.'
     ),
 
     new CardModel(
