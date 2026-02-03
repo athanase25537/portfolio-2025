@@ -1,19 +1,31 @@
 
 <header [ngClass]="{'show': show}">
-    @if(show) {
-        <i (click)="onClick()" class="fs-1 fa-solid fa-xmark"></i>
-    } @else {
-        <i (click)="onClick()" class="fs-1 fa-solid fa-bars"></i>
-    }
+    <button class="menu-toggle" (click)="onClick()" aria-label="Basculer la navigation">
+        @if(show) {
+            <i class="fa-solid fa-xmark"></i>
+        } @else {
+            <i class="fa-solid fa-bars"></i>
+        }
+    </button>
 
-    <div class="logo">
-        <span>Happy</span> Coder
-    </div>
+    <a class="logo" href="#home" (click)="onClickNav('home')">
+        Athanase <span>Marc</span>
+    </a>
 
-    <ul class="py-2">
-        <a href="#home" (click)="onClickNav('home')" [ngClass]="{'active': activeLink == 'home'}"><li class="p-0 active rounded-pill">Home</li></a>
-        <a href="#services" (click)="onClickNav('services')" [ngClass]="{'active': activeLink == 'services'}"><li class="py-2 px-3 rounded-pill">Services</li></a>
-        <a href="#portfolio" (click)="onClickNav('portfolio')" [ngClass]="{'active': activeLink == 'portfolio'}"><li class="py-2 px-3 rounded-pill">Portfolio</li></a>
-        <a href="#contact" (click)="onClickNav('contact')" [ngClass]="{'active': activeLink == 'contact'}"><li class="py-2 px-3 rounded-pill">Contact</li></a>
+    <ul class="nav-links">
+        <li><a href="#home" (click)="onClickNav('home')" [ngClass]="{'active': activeLink() == 'home'}">Home</a></li>
+        <li><a href="#about" (click)="onClickNav('about')" [ngClass]="{'active': activeLink() == 'about'}">About</a></li>
+        <li><a href="#skills" (click)="onClickNav('skills')" [ngClass]="{'active': activeLink() == 'skills'}">Skills</a></li>
+        <li><a href="#projects" (click)="onClickNav('projects')" [ngClass]="{'active': activeLink() == 'projects'}">Projects</a></li>
+        <li class="theme">
+            <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="theme === 'dark' ? 'Activer le mode clair' : 'Activer le mode sombre'">
+                @if (theme === 'dark') {
+                    <i class="fa-solid fa-sun"></i>
+                } @else {
+                    <i class="fa-solid fa-moon"></i>
+                }
+            </button>
+        </li>
+        <li class="cta"><a href="#contact" (click)="onClickNav('contact')" [ngClass]="{'active': activeLink() == 'contact'}">Contact</a></li>
     </ul>
 </header>
