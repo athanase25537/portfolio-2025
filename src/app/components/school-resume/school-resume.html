@@ -1,6 +1,6 @@
-<div class="container">
-    <h1 class="fs-4 fw-bold text-center">My Resume<div class="line"><span class="bg-secondary rounded"></span><span class="unique rounded"></span><span class="bg-secondary rounded"></span></div></h1>
-    <div class="row d-flex justify-content-between gap-3 position-relative">
+<section class="section container resume">
+    <h2 class="section-title" data-reveal>My <span>Resume</span></h2>
+    <div class="row resume-panel d-flex justify-content-between gap-3 position-relative" data-reveal style="--delay: 0.1s">
         <div class="nav rounded-pill">
             <ul class="py-2 px-0">
                 <li (click)="onClick('exp')" [ngClass]="{'active': type == 'exp'}" class="rounded-pill px-4 py-2"><a href="#experiences"><span>Experiences</span></a></li>
@@ -29,4 +29,4 @@
             }
         }
     </div>
-</div>
+</section>
