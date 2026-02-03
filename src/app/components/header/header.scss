@@ -1,30 +1,25 @@
 header {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     top: 0;
     left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 200px;
+    padding: 1.1rem 6vw;
     background-color: var(--bs-fourth);
-    color: white;
-    z-index: 3;
-
-    i {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 5;
-        display: none;
-    }
-
-    i:hover {
-        cursor: pointer;
-    }
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--stroke);
+    color: var(--text);
+    z-index: 10;
 
     .logo {
-        font-size: 1.1em;
+        font-family: 'Syne', sans-serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--text);
 
         span {
             filter: brightness(2.4);
@@ -32,96 +27,113 @@ header {
         }
     }
 
-    ul {
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text);
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    .nav-links {
         display: flex;
         align-items: center;
         list-style: none;
         margin: 0;
         padding: 0;
-        gap: 50px;
+        gap: 2rem;
 
         a {
             text-decoration: none;
-            color: white;
-            transition: color .3s ease-in-out;
-
-            li {
-                text-decoration: none;
-            }
+            color: var(--muted);
+            transition: color .2s ease-in-out;
+            font-size: 0.95rem;
         }
 
-        a.active, a:hover {
-            filter: brightness(2.4);
-            color: var(--bs-secondary);
+        a.active,
+        a:hover {
+            color: var(--text);
+        }
+
+        li.cta a {
+            background: var(--bs-secondary);
+            color: #0a1123;
+            padding: 0.55rem 1.35rem;
+            border-radius: 999px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            box-shadow: 0 12px 24px rgba(198, 243, 91, 0.25);
+        }
+
+        li.cta a:hover {
+            color: #0a1123;
+            filter: brightness(1.05);
+        }
+
+        li.cta a.active {
+            color: #0a1123;
+        }
+
+        li.theme {
+            display: flex;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--stroke);
+            background: var(--panel);
+            color: var(--text);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: border 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-1px);
         }
     }
 }
 
-@media screen and (max-width: 1140px) {
-    header {
-        ul {
-            gap: 20px;
-        }
-    }
+:host-context([data-theme='light']) header .logo span {
+    color: #4a7f0e;
+    filter: none;
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 960px) {
     header {
-        padding: 0 100px;
+        padding: 0.9rem 6vw;
 
-        ul {
-            gap: 10px;
-        }
-    }
-}
-
-@media screen and (max-width: 770px) {
-    header {
-        padding: 0 50px;
-    }
-}
-
-@media screen and (max-width: 660px) {
-    header {
-        padding: 0 30px;
-
-        ul {
-            gap: 5px;
-        }
-    }
-}
-
-@media screen and (max-width: 600px) {
-    header {
-        padding: 10px 0;
-        transition: height .3s ease-in-out;
-        
-        i {
+        .menu-toggle {
             display: block;
         }
 
-        .logo {
-            margin-left: 10px;
-        }
-    
-        
-        ul {
+        .nav-links {
             flex-direction: column;
-            justify-content: center;
-            opacity: 1;
-            width: 100%;
-            position: absolute;
-            top: 46px;
-            height: 96vh;
-            background-color: var(--bs-fourth);
-            transition: margin .3s ease-in-out;
-            margin-left: 100%;
+            gap: 1.5rem;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            padding: 2.5rem 0;
+            background: var(--panel-strong);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transform: translateY(-140%);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: var(--shadow);
         }
     }
 
     header.show {
-        ul {
-            margin-left: 0;
+        .nav-links {
+            transform: translateY(0);
         }
     }
 }
