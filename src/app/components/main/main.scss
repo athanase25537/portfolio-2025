@@ -131,6 +131,7 @@
         padding: 1rem 1.2rem;
         border-radius: 18px;
         max-width: 220px;
+        min-width: 200px;
 
         .label {
             text-transform: uppercase;
@@ -192,9 +193,6 @@
 .hero .my-btn {
     box-shadow: 0 12px 24px rgba(198, 243, 91, 0.25);
     transition: filter 0.25s ease, box-shadow 0.25s ease;
-}
-
-.hero .my-btn:hover {
 }
 
 
