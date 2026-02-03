@@ -11,11 +11,38 @@ import { Icon } from "../icon/icon";
 })
 export class Techno implements OnInit {
 
-  icons!: IconModel[];
+  skillGroups: {
+    title: string;
+    description: string;
+    icons: IconModel[];
+  }[] = [];
 
   constructor(private iconService: IconService) { }
 
   ngOnInit(): void {
-    this.icons = this.iconService.getIcons();
+    const icons = this.iconService.getIcons();
+    const iconMap = new Map(icons.map((icon) => [icon.legend, icon]));
+    const pick = (names: string[]) =>
+      names
+        .map((name) => iconMap.get(name))
+        .filter((icon): icon is IconModel => icon !== undefined);
+
+    this.skillGroups = [
+      {
+        title: 'Front-End',
+        description: 'Interfaces web modernes, responsive & accessibles.',
+        icons: pick(['angular', 'html5', 'css3', 'javascript', 'typescript', 'bootstrap'])
+      },
+      {
+        title: 'Back-End',
+        description: 'APIs, logique métier & frameworks performants.',
+        icons: pick(['python', 'php', 'django', 'fastapi'])
+      },
+      {
+        title: 'DevOps',
+        description: 'Conteneurisation et workflow de livraison.',
+        icons: pick(['docker'])
+      }
+    ];
   }
 }
