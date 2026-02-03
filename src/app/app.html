@@ -1,9 +1,16 @@
+@if (isLoading()) {
+    <div class="page-loader" role="status" aria-live="polite">
+        <div class="loader-core">
+            <span class="loader-ring"></span>
+            <p>Chargement du portfolio</p>
+        </div>
+    </div>
+}
+<div class="cursor-bubble" aria-hidden="true"></div>
 <app-header/>
-<div class="container">
-    <app-main/>
-    <app-myservices />
-    <app-school-resume/>
-    <app-portfolio/>
-    <app-techno/>
-    <app-contact/>
-</div>
+<app-main/>
+<app-myservices />
+<app-school-resume/>
+<app-portfolio/>
+<app-techno/>
+<app-contact/>
