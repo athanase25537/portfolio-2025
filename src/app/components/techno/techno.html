@@ -1,11 +1,26 @@
-<div class="container">
-    <h1 class="fs-4 fw-bold text-center">Technologies<div class="line"><span class="bg-secondary rounded"></span><span class="unique rounded"></span><span class="bg-secondary rounded"></span></div></h1>
-    
-    <div class="row mb-5">
-        @for(icon of icons; track $index) {
-            <app-icon class="icon" [icon]="icon"></app-icon>
-        }
-
-        
+<section id="skills" class="section container skills">
+    <div class="skills-header">
+        <h2 class="section-title" data-reveal>My <span>Skills</span></h2>
+        <p class="skills-intro" data-reveal style="--delay: 0.08s">
+            Compétences organisées par domaines pour mettre en avant mon expertise.
+        </p>
     </div>
-</div>
+    <div class="skills-groups">
+        @for(group of skillGroups; track $index) {
+            <div class="skills-group glass" data-reveal [style.--delay]="($index * 0.12) + 's'">
+                <div class="group-header">
+                    <div class="group-title">
+                        <h3>{{ group.title }}</h3>
+                        <span class="group-meta">{{ group.icons.length }} techs</span>
+                    </div>
+                    <p>{{ group.description }}</p>
+                </div>
+                <div class="group-grid">
+                    @for(icon of group.icons; track $index) {
+                        <app-icon class="icon" [icon]="icon"></app-icon>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</section>
