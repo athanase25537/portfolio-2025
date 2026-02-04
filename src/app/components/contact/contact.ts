@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class Contact {
   email: string = 'andriamasyathanase.nazy@gmail.com';
-  phone: string = '0383221744';
+  phone: string = '038 32 217 44';
   address: string = 'II M 45 ABC Androhibe Antananarivo'
 }

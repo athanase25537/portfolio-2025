@@ -153,9 +153,23 @@ img {
     font-size: 0.75rem;
 }
 
+.loader-brand {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    display: grid;
+    place-items: center;
+}
+
+.loader-logo {
+    width: 112px;
+    height: auto;
+    filter: drop-shadow(0 8px 20px rgba(198, 243, 91, 0.25));
+}
+
 .loader-ring {
-    width: 64px;
-    height: 64px;
+    position: absolute;
+    inset: 0;
     border-radius: 50%;
     border: 2px solid rgba(198, 243, 91, 0.3);
     border-top-color: var(--accent);
