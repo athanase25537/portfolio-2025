@@ -19,31 +19,43 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
   isLoading = signal(true);
   private observer?: IntersectionObserver;
   private loaderTimeoutId?: number;
+  private hasWindowLoaded = false;
+  private hasMinLoaderDelayElapsed = false;
   private cursorMoveHandler?: (event: MouseEvent) => void;
   private cursorFrameId?: number;
   private cursorTarget = { x: 0, y: 0 };
   private cursorCurrent = { x: 0, y: 0 };
 
   ngOnInit(): void {
-    const hideLoader = () => {
+    const hideLoaderIfReady = () => {
+      if (!this.hasWindowLoaded || !this.hasMinLoaderDelayElapsed) {
+        return;
+      }
       if (!this.isLoading()) {
         return;
       }
       this.isLoading.set(false);
       if (this.loaderTimeoutId) {
         clearTimeout(this.loaderTimeoutId);
+        this.loaderTimeoutId = undefined;
       }
     };
 
-    this.loaderTimeoutId = window.setTimeout(hideLoader, 1600);
+    this.hasWindowLoaded = document.readyState === 'complete';
 
-    if (document.readyState === 'complete') {
-      hideLoader();
+    this.loaderTimeoutId = window.setTimeout(() => {
+      this.hasMinLoaderDelayElapsed = true;
+      hideLoaderIfReady();
+    }, 3000);
+
+    if (this.hasWindowLoaded) {
+      hideLoaderIfReady();
     } else {
       window.addEventListener(
         'load',
         () => {
-          hideLoader();
+          this.hasWindowLoaded = true;
+          hideLoaderIfReady();
         },
         { once: true }
       );
