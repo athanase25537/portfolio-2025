@@ -8,28 +8,28 @@ export class Myresume {
 
   private edcuationCards: CardResumeModel[] = [
     new CardResumeModel(
-      "Licence en informatique",
+      "Bachelor's Degree in Computer Science",
       "2021",
       "2024",
-      "institut supérieur polytechnique de madagasar",
-      "Cours d'informatique où j'ai pu réalisé des projets autant personnel que par équipe.",
+      "Higher Polytechnic Institute of Madagascar",
+      "Computer science program where I completed both personal and team projects.",
       false
     ),
     new CardResumeModel(
-      "Année Préparatoire",
+      "Foundation Year",
       "Jan 21",
       "Sep 21",
-      "Programme SESAME",
-      "on a fait de l'orientation scolaire, professionnelle, développement personnel, renforcement scolaire.",
+      "SESAME Program",
+      "Covered academic and career guidance, personal development, and academic reinforcement.",
       false
     ),  
 
     new CardResumeModel(
-      "Baccalaureat",
+      "High School Diploma",
       "2019",
       "2020",
-      "Lycée Présentation de Marie",
-      "Baccalauréat série C avec mention Bien.",
+      "Presentation de Marie High School",
+      "Science track (Series C) with honors.",
       false
     ),
 
@@ -44,38 +44,38 @@ export class Myresume {
 
   private experienceCards: CardResumeModel[] = [
     new CardResumeModel(
-      "Fullstack Django",
-      "Fev 25",
-      "Mai 25",
+      "Full-Stack Django",
+      "Feb 25",
+      "May 25",
       "Freelance",
-      "Réalisation d'une application de gestion de rendez-vous et de l'evolution de dossier pour un avocat.",
+      "Built an appointment and case-tracking management application for a lawyer.",
       false
     ),
 
     new CardResumeModel(
-      "Fullstack PHP",
+      "Full-Stack PHP",
       "Jan 25",
-      "Avr 25",
-      "Full remote",
-      "Site de gestion d'un bien immobilier (bailonline). Création des biens, abonnement, paiement loyer,...",
+      "Apr 25",
+      "Fully remote",
+      "Real estate management platform (BailOnline): property creation, subscriptions, rent payments, and more.",
       false
     ),
 
     new CardResumeModel(
-      "Stagiaire Backend",
-      "Fev 25",
-      "Jui 25",
-      "Oceantrade du Group Viseo",
-      "Création d'API et maintenance d'une application CSMS. Traitement en temps réel avec Websocket et rabbitMQ.",
+      "Backend Intern",
+      "Feb 25",
+      "Jul 25",
+      "Oceantrade - Viseo Group",
+      "Built APIs and maintained a CSMS application with real-time processing using WebSocket and RabbitMQ.",
       false
     ),
 
     new CardResumeModel(
-      "Stage Decouverte",
+      "Discovery Internship",
       "Oct 21",
       "Nov 21",
-      "ingenosya madagasar",
-      "Initiation et découverte du langage PHP et réalisation d'un mini projet.",
+      "Ingenosya Madagascar",
+      "Introduction to PHP and delivery of a mini project.",
       false
     ),
   ];
@@ -87,46 +87,46 @@ export class Myresume {
   private certificatCards: CardResumeModel[] = [
     new CardResumeModel(
       "Angular Basic",
-      "Juin 25",
+      "Jun 25",
       "",
-      "hackerrank",
-      "Maîtrise du fondamental d'angular: component, services, event, data binding,...",
+      "HackerRank",
+      "Mastery of Angular fundamentals: components, services, events, data binding, and more.",
       false
     ),
 
     new CardResumeModel(
-      "ML intermédiaire",
-      "Mai 25",
+      "Intermediate ML",
+      "May 25",
       "",
       "Kaggle",
-      "Amélioration de la performance de la création de modèle: cross validation, XGBoost, ...",
+      "Improved model-building performance: cross-validation, XGBoost, and more.",
       false
     ),
 
     new CardResumeModel(
-      "Machine Learning intro",
-      "Avr 25",
+      "Machine Learning Intro",
+      "Apr 25",
       "",
       "Kaggle",
-      "Premier pas dans la machine learning: les bases de ML,regression linéaire,...",
+      "First steps in machine learning: ML fundamentals, linear regression, and more.",
       false
     ),
 
     new CardResumeModel(
       "Python",
-      "Avr 25",
+      "Apr 25",
       "",
       "Kaggle",
-      "Base du langage python: variable, fonction, type des données,...",
+      "Python fundamentals: variables, functions, data types, and more.",
       false
     ),
 
     new CardResumeModel(
-      "SQL intermédiaire",
+      "Intermediate SQL",
       "Mar 25",
       "",
-      "Hackerrank",
-      "Compétences intermédiaires en SQL acquises via des exercices et certifications sur Hackerrank.",
+      "HackerRank",
+      "Intermediate SQL skills developed through exercises and certifications on HackerRank.",
       false
     ),
   ]

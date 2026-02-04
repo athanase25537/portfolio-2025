@@ -1,6 +1,6 @@
 
 <header [ngClass]="{'show': show}">
-    <button class="menu-toggle" (click)="onClick()" aria-label="Basculer la navigation" [attr.aria-expanded]="show" aria-controls="site-nav">
+    <button class="menu-toggle" (click)="onClick()" aria-label="Toggle navigation" [attr.aria-expanded]="show" aria-controls="site-nav">
         @if(show) {
             <i class="fa-solid fa-xmark"></i>
         } @else {
@@ -9,7 +9,7 @@
     </button>
 
     <a class="logo" href="#home" (click)="onClickNav('home')">
-        <img src="assets/imgs/mylogo.svg" alt="Logo Athanase Marc" />
+        <img src="assets/imgs/mylogo.svg" alt="Athanase Marc logo" />
     </a>
 
     <ul id="site-nav" class="nav-links">
@@ -18,7 +18,7 @@
         <li><a href="#skills" (click)="onClickNav('skills')" [ngClass]="{'active': activeLink() == 'skills'}">Skills</a></li>
         <li><a href="#projects" (click)="onClickNav('projects')" [ngClass]="{'active': activeLink() == 'projects'}">Projects</a></li>
         <li class="theme">
-            <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="theme === 'dark' ? 'Activer le mode clair' : 'Activer le mode sombre'">
+            <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="theme === 'dark' ? 'Enable light mode' : 'Enable dark mode'">
                 @if (theme === 'dark') {
                     <i class="fa-solid fa-sun"></i>
                 } @else {

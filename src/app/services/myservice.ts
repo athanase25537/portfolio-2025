@@ -9,26 +9,26 @@ export class Myservice {
   cards: CardModel[] = [
     new CardModel(
       'fa-solid fa-code',
-      'Dev Backend',
-      'Création et maintenance d\'API robustes avec FastAPI ou PHP, intégration de protocoles comme OCPP.'
+      'Backend Development',
+      'Building and maintaining robust APIs with FastAPI or PHP, including integrations with protocols such as OCPP.'
     ),
 
     new CardModel(
       'fa-solid fa-globe',
-      'Dev Fullstack',
-      'Développement de sites web dynamiques en utilisant Angular, Django, Twig, JavaScript, Bootstrap.'
+      'Full-Stack Development',
+      'Developing dynamic web applications using Angular, Django, Twig, JavaScript, and Bootstrap.'
     ),
 
     new CardModel(
       'fa-solid fa-robot',
-      'M. Learning',
-      'Conception de modèles prédictifs de Machine Learning avec Python, Scikit-learn, TensorFlow et Pytorch.'
+      'Machine Learning',
+      'Designing predictive machine learning models with Python, Scikit-learn, TensorFlow, and PyTorch.'
     ),
 
     new CardModel(
       'fa-solid fa-gears',
-      'Automatisme',
-      'Création de scripts Python pour automatiser des tâches répétitives ou résoudre des problèmes algorithmiques.'
+      'Automation',
+      'Creating Python scripts to automate repetitive tasks and solve algorithmic problems.'
     ),
   ]
 

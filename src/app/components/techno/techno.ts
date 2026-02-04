@@ -30,17 +30,17 @@ export class Techno implements OnInit {
     this.skillGroups = [
       {
         title: 'Front-End',
-        description: 'Interfaces web modernes, responsive & accessibles.',
+        description: 'Modern, responsive, and accessible web interfaces.',
         icons: pick(['angular', 'html5', 'css3', 'javascript', 'typescript', 'bootstrap'])
       },
       {
         title: 'Back-End',
-        description: 'APIs, logique métier & frameworks performants.',
+        description: 'APIs, business logic, and high-performance frameworks.',
         icons: pick(['python', 'php', 'django', 'fastapi'])
       },
       {
         title: 'DevOps',
-        description: 'Conteneurisation et workflow de livraison.',
+        description: 'Containerization and delivery workflows.',
         icons: pick(['docker'])
       }
     ];

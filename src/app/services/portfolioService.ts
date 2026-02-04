@@ -11,42 +11,42 @@ export class PortfolioService {
   myPortfolio: cardPortfolioModel[] = [
     new cardPortfolioModel(
       "assets/imgs/rendezvous.png",
-      "Site de gestion de rendez-vous et évolution de dossier pour un avocat.",
+      "Appointment and case-tracking management platform built for a lawyer.",
       "https://github.com/athanase25537/rendezvous",
       "https://rendezvous-1-k3uj.onrender.com"
     ),
 
     new cardPortfolioModel(
       "assets/imgs/portfolio.png",
-      "Il donne plus d'information sur moi ainsi que mes réalisations.",
+      "A portfolio website presenting my background and projects.",
       "https://github.com/athanase25537/portfolio-2025",
       "#"
     ),
 
     new cardPortfolioModel(
       "assets/imgs/mvola.png",
-      "Une documentation claire et simple sur l'utilisation de l'API MVola.",
+      "Clear and simple documentation for using the MVola API.",
       "https://github.com/athanase25537/mvolaapi",
       "https://mvolaapi.onrender.com/"
     ),
 
     new cardPortfolioModel(
       "assets/imgs/api.png",
-      "API sur le modèle de prédiction de prix d'un immobilier (California housing).",
+      "API for a real estate price prediction model (California Housing dataset).",
       "https://github.com/athanase25537/california_housing",
       ""
     ),
 
     new cardPortfolioModel(
       "assets/imgs/gemini.png",
-      "Un chat bot utilisant l'api de Gemini pour une conversation d'un peu de tout.",
+      "A chatbot powered by the Gemini API for general-purpose conversations.",
       "https://github.com/athanase25537/chat-gemini",
       ""
     ),
 
     new cardPortfolioModel(
       "assets/imgs/quiz.png",
-      "Une application de quiz simple comportant de l'histoire et de la logique.",
+      "A simple quiz application featuring history and logic questions.",
       "https://github.com/athanase25537/quiz",
       ""
     )
