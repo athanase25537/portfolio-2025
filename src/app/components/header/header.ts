@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, OnDestroy, OnInit, signal } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnDestroy, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -31,6 +31,13 @@ export class Header implements OnInit, AfterViewInit, OnDestroy {
   onClickNav(value: string): void {
     this.activeLink.set(value);
     this.show = false;
+  }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    if (window.innerWidth > 960 && this.show) {
+      this.show = false;
+    }
   }
 
   toggleTheme(): void {

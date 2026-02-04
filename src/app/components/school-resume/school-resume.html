@@ -1,11 +1,11 @@
 <section class="section container resume">
     <h2 class="section-title" data-reveal>My <span>Resume</span></h2>
-    <div class="row resume-panel d-flex justify-content-between gap-3 position-relative" data-reveal style="--delay: 0.1s">
-        <div class="nav rounded-pill">
-            <ul class="py-2 px-0">
-                <li (click)="onClick('exp')" [ngClass]="{'active': type == 'exp'}" class="rounded-pill px-4 py-2"><a href="#experiences"><span>Experiences</span></a></li>
-                <li (click)="onClick('edu')" [ngClass]="{'active': type == 'edu'}" class="rounded-pill px-4 py-2"><a href="#educations"><span>Educations</span></a></li>
-                <li (click)="onClick('cert')" [ngClass]="{'active': type == 'cert'}" class="rounded-pill px-4 py-2"><a href="#certificats"><span>Certificats</span></a></li>
+    <div class="resume-panel" data-reveal style="--delay: 0.1s">
+        <div class="nav">
+            <ul>
+                <li (click)="onClick('exp')" [ngClass]="{'active': type == 'exp'}" class="rounded-pill"><a href="#experiences"><span>Experiences</span></a></li>
+                <li (click)="onClick('edu')" [ngClass]="{'active': type == 'edu'}" class="rounded-pill"><a href="#educations"><span>Educations</span></a></li>
+                <li (click)="onClick('cert')" [ngClass]="{'active': type == 'cert'}" class="rounded-pill"><a href="#certificats"><span>Certificats</span></a></li>
             </ul>
         </div>
 

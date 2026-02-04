@@ -20,6 +20,7 @@ header {
         letter-spacing: 0.18em;
         text-transform: uppercase;
         color: var(--text);
+        white-space: nowrap;
 
         span {
             filter: brightness(2.4);
@@ -109,31 +110,91 @@ header {
 
 @media screen and (max-width: 960px) {
     header {
-        padding: 0.9rem 6vw;
+        padding: 0.85rem 5vw;
 
         .menu-toggle {
-            display: block;
+            order: 2;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid var(--stroke);
+            background: var(--panel);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            order: 1;
+            font-size: 0.95rem;
+            letter-spacing: 0.14em;
         }
 
         .nav-links {
             flex-direction: column;
-            gap: 1.5rem;
+            align-items: stretch;
+            gap: 0.55rem;
             position: fixed;
-            top: 70px;
-            left: 0;
-            right: 0;
-            padding: 2.5rem 0;
+            top: 64px;
+            left: 0.8rem;
+            right: 0.8rem;
+            padding: 1rem;
             background: var(--panel-strong);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            transform: translateY(-140%);
-            transition: transform 0.3s ease-in-out;
+            border: 1px solid var(--stroke);
+            border-radius: 22px;
+            transform: translateY(-120%) scale(0.98);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+            max-height: calc(100dvh - 80px);
+            overflow-y: auto;
             box-shadow: var(--shadow);
+
+            li {
+                width: 100%;
+            }
+
+            a {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                border-radius: 999px;
+                padding: 0.65rem 1rem;
+            }
+
+            li.theme {
+                justify-content: center;
+                margin-top: 0.1rem;
+            }
+
+            li.cta {
+                margin-top: 0.35rem;
+            }
         }
     }
 
     header.show {
         .nav-links {
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    header {
+        padding: 0.75rem 4vw;
+
+        .logo {
+            font-size: 0.86rem;
+            letter-spacing: 0.12em;
+        }
+
+        .nav-links {
+            top: 60px;
+            left: 0.6rem;
+            right: 0.6rem;
         }
     }
 }

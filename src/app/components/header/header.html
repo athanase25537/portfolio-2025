@@ -1,6 +1,6 @@
 
 <header [ngClass]="{'show': show}">
-    <button class="menu-toggle" (click)="onClick()" aria-label="Basculer la navigation">
+    <button class="menu-toggle" (click)="onClick()" aria-label="Basculer la navigation" [attr.aria-expanded]="show" aria-controls="site-nav">
         @if(show) {
             <i class="fa-solid fa-xmark"></i>
         } @else {
@@ -12,7 +12,7 @@
         Athanase <span>Marc</span>
     </a>
 
-    <ul class="nav-links">
+    <ul id="site-nav" class="nav-links">
         <li><a href="#home" (click)="onClickNav('home')" [ngClass]="{'active': activeLink() == 'home'}">Home</a></li>
         <li><a href="#about" (click)="onClickNav('about')" [ngClass]="{'active': activeLink() == 'about'}">About</a></li>
         <li><a href="#skills" (click)="onClickNav('skills')" [ngClass]="{'active': activeLink() == 'skills'}">Skills</a></li>

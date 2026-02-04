@@ -6,6 +6,11 @@
         border: 1px solid var(--stroke);
         border-radius: 28px;
         padding: 3.5rem 3rem 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.2rem;
+        position: relative;
         box-shadow: var(--shadow);
     }
 
@@ -31,17 +36,25 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            gap: 0.45rem;
+            padding: 0.5rem;
             list-style: none;
 
             li {
                 text-transform: uppercase;
                 font-size: 0.8rem;
                 letter-spacing: 0.12em;
+                text-align: center;
+                flex: 1 1 0;
+                padding: 0.55rem 0.85rem;
+                cursor: pointer;
                 transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
                 a {
+                    display: block;
                     text-decoration: none;
                     color: var(--muted);
+                    white-space: nowrap;
                 }
             }
 
@@ -58,14 +71,36 @@
     }
 
     .content {
-        width: 45%;
+        width: calc(50% - 0.6rem);
     }
 }
 
 @media screen and (max-width: 991px) {
     .resume {
         .resume-panel {
-            padding: 3.5rem 2rem 2.5rem;
+            padding: 2.5rem 2rem 2rem;
+        }
+
+        .nav {
+            position: static;
+            top: auto;
+            left: auto;
+            transform: none;
+            width: 100%;
+            border-radius: 22px;
+
+            ul {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0.45rem;
+            }
+
+            li {
+                flex: 1 1 150px;
+                font-size: 0.72rem;
+                letter-spacing: 0.08em;
+                padding: 0.6rem 0.5rem;
+            }
         }
 
         .content {
@@ -77,11 +112,39 @@
 @media screen and (max-width: 600px) {
     .resume {
         .resume-panel {
-            padding: 3.5rem 1.5rem 2.5rem;
+            padding: 2.2rem 1.2rem 1.6rem;
         }
 
         .nav {
-            font-size: 0.7rem;
+            ul {
+                padding: 0.45rem;
+            }
+
+            li {
+                flex: 1 1 calc(33.33% - 0.35rem);
+                min-width: 0;
+                font-size: 0.64rem;
+                letter-spacing: 0.05em;
+                padding: 0.5rem 0.35rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .resume {
+        .nav {
+            ul {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0.35rem;
+            }
+
+            li {
+                font-size: 0.68rem;
+                letter-spacing: 0.08em;
+                padding: 0.55rem 0.5rem;
+            }
         }
     }
 }
