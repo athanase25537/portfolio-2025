@@ -16,7 +16,8 @@ export class SchoolResume implements OnInit {
   educationCards!: CardResumeModel[];
   experienceCards!: CardResumeModel[]; 
   certificatCards!: CardResumeModel[];
-  type!: string; // edu | exp | ski
+  prizeCards!: CardResumeModel[];
+  type!: string; // edu | exp | cert | prize
 
   constructor(private resumeService: Myresume) { }
 
@@ -25,6 +26,7 @@ export class SchoolResume implements OnInit {
     this.educationCards = this.resumeService.getEducationCards();
     this.experienceCards = this.resumeService.getExperienceCards();
     this.certificatCards = this.resumeService.getCertificatCards();
+    this.prizeCards = this.resumeService.getPrizeCards();
   }
 
   onClick(val: string) {

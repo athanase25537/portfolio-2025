@@ -134,5 +134,38 @@ export class Myresume {
   getCertificatCards(): CardResumeModel[] {
     return this.certificatCards;
   }
+
+  private prizeCards: CardResumeModel[] = [
+    new CardResumeModel(
+      "ODC Champions 2025",
+      "Dec 25",
+      "",
+      "ISPM Team",
+      "3rd place nationally with the ISPM team.",
+      false
+    ),
+
+    new CardResumeModel(
+      "Stupid Hackathon",
+      "Jul 25",
+      "",
+      "Stupid Hackathon",
+      "Won the Most Perseverant Team prize after delivering a creative, intentionally absurd web project.",
+      false
+    ),
+
+    new CardResumeModel(
+      "DevFest 2024",
+      "Nov 24",
+      "",
+      "Competitive Programming",
+      "1st place. Solved CodinGame optimization challenges (resource management, shortest path, advanced sorting) and algorithmic tasks (vacuum bot, laundry bot, image upscaling); scores: 5,275,044 points and 25/25.",
+      false
+    ),
+  ]
+
+  getPrizeCards(): CardResumeModel[] {
+    return this.prizeCards;
+  }
   constructor() { }
 }

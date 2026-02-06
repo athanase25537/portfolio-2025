@@ -6,6 +6,7 @@
                 <li (click)="onClick('exp')" [ngClass]="{'active': type == 'exp'}" class="rounded-pill"><a href="#experiences"><span>Experiences</span></a></li>
                 <li (click)="onClick('edu')" [ngClass]="{'active': type == 'edu'}" class="rounded-pill"><a href="#education"><span>Education</span></a></li>
                 <li (click)="onClick('cert')" [ngClass]="{'active': type == 'cert'}" class="rounded-pill"><a href="#certificates"><span>Certificates</span></a></li>
+                <li (click)="onClick('prize')" [ngClass]="{'active': type == 'prize'}" class="rounded-pill"><a href="#prizes"><span>Prizes</span></a></li>
             </ul>
         </div>
 
@@ -21,8 +22,14 @@
                     <app-card-resume [card]="card"/>
                 </div>
             }
-        } @else {
+        } @else if (type == "cert") {
             @for(card of certificatCards; track $index) {
+                <div class="content">
+                    <app-card-resume [card]="card"/>
+                </div>
+            }
+        } @else {
+            @for(card of prizeCards; track $index) {
                 <div class="content">
                     <app-card-resume [card]="card"/>
                 </div>
