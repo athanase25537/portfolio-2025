@@ -10,6 +10,13 @@ export class PortfolioService {
 
   myPortfolio: cardPortfolioModel[] = [
     new cardPortfolioModel(
+      "assets/imgs/my-shop.png",
+      "Boutique en ligne avec navigation par catégories et mise en avant des produits.",
+      "https://github.com/athanase25537/e-commerce",
+      "https://my-shop-1yly.onrender.com/"
+    ),
+
+    new cardPortfolioModel(
       "assets/imgs/rendezvous.png",
       "Appointment and case-tracking management platform built for a lawyer.",
       "https://github.com/athanase25537/rendezvous",
