@@ -6,7 +6,6 @@ import { SchoolResume } from "./components/school-resume/school-resume";
 import { Portfolio } from "./components/portfolio/portfolio";
 import { Contact } from "./components/contact/contact";
 import { Techno } from "./components/techno/techno";
-import { Icon } from "./components/icon/icon";
 
 @Component({
   selector: 'app-root',

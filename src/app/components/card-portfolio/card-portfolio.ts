@@ -10,7 +10,7 @@ import { cardPortfolioModel } from '../../models/cardPortfolioModel';
 export class CardPortfolio {
   card = input<cardPortfolioModel>(
     new cardPortfolioModel(
-      "assets/imgs/gemini.png",
+      "assets/imgs/gemini.webp",
       "Un chat bot utilisant l'api de Gemini pour une conversation d'un peu de tout.",
       "https://github.com/athanase25537/chat-gemini",
       ""
