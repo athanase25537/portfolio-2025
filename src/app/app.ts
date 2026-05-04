@@ -18,8 +18,6 @@ export class App implements AfterViewInit, OnDestroy {
   protected title = 'portfolio-2026';
   isLoading = signal(true);
   private observer?: IntersectionObserver;
-  private hasWindowLoaded = false;
-  private hasMinLoaderDelayElapsed = false;
   private cursorMoveHandler?: (event: MouseEvent) => void;
   private cursorFrameId?: number;
   private cursorTarget = { x: 0, y: 0 };
@@ -38,8 +36,6 @@ export class App implements AfterViewInit, OnDestroy {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-          } else {
-            entry.target.classList.remove('is-visible');
           }
         });
       },
