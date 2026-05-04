@@ -10,15 +10,14 @@ import { Icon } from "./components/icon/icon";
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Main, Myservices, SchoolResume, Portfolio, Contact, Techno, Icon],
+  imports: [Header, Main, Myservices, SchoolResume, Portfolio, Contact, Techno],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App implements OnInit, AfterViewInit, OnDestroy {
+export class App implements AfterViewInit, OnDestroy {
   protected title = 'portfolio-2026';
   isLoading = signal(true);
   private observer?: IntersectionObserver;
-  private loaderTimeoutId?: number;
   private hasWindowLoaded = false;
   private hasMinLoaderDelayElapsed = false;
   private cursorMoveHandler?: (event: MouseEvent) => void;
@@ -26,41 +25,6 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
   private cursorTarget = { x: 0, y: 0 };
   private cursorCurrent = { x: 0, y: 0 };
 
-  ngOnInit(): void {
-    const hideLoaderIfReady = () => {
-      if (!this.hasWindowLoaded || !this.hasMinLoaderDelayElapsed) {
-        return;
-      }
-      if (!this.isLoading()) {
-        return;
-      }
-      this.isLoading.set(false);
-      if (this.loaderTimeoutId) {
-        clearTimeout(this.loaderTimeoutId);
-        this.loaderTimeoutId = undefined;
-      }
-    };
-
-    this.hasWindowLoaded = document.readyState === 'complete';
-
-    this.loaderTimeoutId = window.setTimeout(() => {
-      this.hasMinLoaderDelayElapsed = true;
-      hideLoaderIfReady();
-    }, 3000);
-
-    if (this.hasWindowLoaded) {
-      hideLoaderIfReady();
-    } else {
-      window.addEventListener(
-        'load',
-        () => {
-          this.hasWindowLoaded = true;
-          hideLoaderIfReady();
-        },
-        { once: true }
-      );
-    }
-  }
 
   ngAfterViewInit(): void {
     const elements = document.querySelectorAll<HTMLElement>('[data-reveal]');
@@ -88,9 +52,7 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.observer?.disconnect();
-    if (this.loaderTimeoutId) {
-      clearTimeout(this.loaderTimeoutId);
-    }
+
     if (this.cursorMoveHandler) {
       window.removeEventListener('mousemove', this.cursorMoveHandler);
     }
