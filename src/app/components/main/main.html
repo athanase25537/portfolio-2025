@@ -16,7 +16,14 @@
     </div>
 
     <div class="hero-visual" data-reveal style="--delay: 0.15s">
-        <div class="hero-portrait"></div>
+        <img 
+            src="assets/imgs/main.webp"
+            alt="portrait"
+            class="hero-portrait"
+            fetchpriority="high"
+            loading="eager"
+            width="320"
+            height="420">
         <div class="floating-card review glass" data-reveal style="--delay: 0.25s">
             <p class="label">Client review</p>
             <p class="value">5.0 / 5</p>
@@ -53,8 +60,22 @@
             <a href="#projects" class="my-btn btn pill"><span>View my projects</span></a>
         </div>
         <div class="about-media" data-reveal style="--delay: 0.25s">
-            <div class="about-photo main"></div>
-            <div class="about-photo alt"></div>
+            <img 
+                src="assets/imgs/main.webp"
+                class="about-photo main"
+                alt="photo principale"
+                loading="eager"
+                fetchpriority="high"
+                width="220"
+                height="280">
+
+            <img 
+                src="assets/imgs/portfolio.webp"
+                class="about-photo alt"
+                alt="photo secondaire"
+                loading="lazy"
+                width="180"
+                height="220">
         </div>
     </div>
 </section>

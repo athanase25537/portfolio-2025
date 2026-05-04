@@ -119,9 +119,8 @@
         width: min(320px, 70vw);
         height: 420px;
         border-radius: 28px;
-        background-image: url('../../../../public/assets/imgs/main.webp');
-        background-size: cover;
-        background-position: center;
+        object-fit: cover;
+        object-position: center;
         border: 1px solid rgba(255, 255, 255, 0.12);
         filter: saturate(1.1);
         box-shadow: var(--shadow);
@@ -239,23 +238,22 @@
         justify-content: center;
     }
 
-    .about-photo {
+   .about-photo {
         width: 220px;
         height: 280px;
         border-radius: 20px;
-        background-size: cover;
-        background-position: center;
+        object-fit: cover;
+        object-position: center;
         border: 1px solid rgba(255, 255, 255, 0.12);
         box-shadow: var(--shadow);
+        position: relative;
     }
 
     .about-photo.main {
-        background-image: url('../../../../public/assets/imgs/main.webp');
         transform: rotate(-4deg);
     }
 
     .about-photo.alt {
-        background-image: url('../../../../public/assets/imgs/portfolio.webp');
         position: absolute;
         right: 10%;
         bottom: -10%;
