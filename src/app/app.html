@@ -1,8 +1,34 @@
 <div class="cursor-bubble" aria-hidden="true"></div>
-<app-header/>
-<app-main/>
-<app-myservices />
-<app-school-resume/>
-<app-portfolio/>
-<app-techno/>
-<app-contact/>
+
+<app-header />
+<app-main />
+
+@defer (on viewport) {
+  <app-myservices />
+} @placeholder {
+  <div class="section-skeleton"></div>
+}
+
+@defer (on viewport) {
+  <app-school-resume />
+} @placeholder {
+  <div class="section-skeleton"></div>
+}
+
+@defer (on viewport) {
+  <app-portfolio />
+} @placeholder {
+  <div class="section-skeleton"></div>
+}
+
+@defer (on viewport) {
+  <app-techno />
+} @placeholder {
+  <div class="section-skeleton"></div>
+}
+
+@defer (on viewport) {
+  <app-contact />
+} @placeholder {
+  <div class="section-skeleton"></div>
+}
