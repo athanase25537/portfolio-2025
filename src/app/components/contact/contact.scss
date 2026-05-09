@@ -4,7 +4,6 @@
 
 .contact {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 2.5rem;
     padding: 2.5rem 3rem;
@@ -25,6 +24,8 @@
         }
 
         .contact-info {
+            padding-left: 1rem;
+
             li {
                 display: flex;
                 align-items: center;
@@ -56,11 +57,17 @@
         width: min(460px, 100%);
         border: 1px solid var(--stroke);
         background: rgba(10, 17, 35, 0.85);
-        padding: 2.5rem;
+        padding: 2rem;
         border-radius: 24px;
 
         h1 span {
             color: var(--accent);
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            margin-bottom: 1.2rem;
         }
 
         input,
