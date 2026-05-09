@@ -28,3 +28,22 @@
     transform: translateY(-4px);
     border-color: rgba(198, 243, 91, 0.45);
 }
+
+@media screen and (max-width: 1121px) {
+    .my-card {
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .my-card {
+        min-height: 240px;
+    }
+}
+
+@media screen and (max-width: 537px) {
+    .my-card {
+        min-height: 100px;
+        background-color: red;
+    }
+}
