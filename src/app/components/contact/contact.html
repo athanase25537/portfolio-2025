@@ -32,14 +32,117 @@
                 </li>
             </ul>
         </div>
-        <form class="rounded form-group">
-            <h1 class="fs-5 mb-4">Send me a <span>message</span></h1>
-            <input type="text" name="name" placeholder="Your name" class="form-control mb-3">
-            <input id="email" name="email" type="email" placeholder="Your email" class="form-control mb-3">
+        
+        <form class="rounded form-group" (ngSubmit)="sendEmail()" #contactForm="ngForm">
 
-            <textarea name="message" placeholder="Your message" class="form-control mb-3" id="message"></textarea>
+    <h1 class="fs-5 mb-4">
+        Send me a <span>message</span>
+    </h1>
 
-            <button class="my-btn pill"><span>Send</span></button>
-        </form>
+    <!-- Message success -->
+    @if(successMessage) {
+        <div class="mb-3 p-3 rounded bg-green-100 text-green-700 text-sm">
+            {{ successMessage }}
+        </div>
+    }
+
+    <!-- Message error -->
+    @if(errorMessage) {
+        <div class="mb-3 p-3 rounded bg-red-100 text-red-700 text-sm">
+            {{ errorMessage }}
+        </div>
+    }
+
+
+    <!-- Name -->
+    <div class="mb-3">
+        <input
+            id="name"
+            type="text"
+            name="name"
+            class="form-control"
+            placeholder="Name"
+            autocomplete="name"
+            required
+            maxlength="100"
+            [(ngModel)]="form.name">
+    </div>
+
+
+    <!-- Email -->
+    <div class="mb-3">
+        <input
+            id="email"
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Your email"
+            autocomplete="email"
+            required
+            [(ngModel)]="form.email">
+    </div>
+
+
+    <!-- Message -->
+    <div class="mb-2">
+        <textarea
+            id="message"
+            name="message"
+            class="form-control"
+            rows="6"
+            placeholder="Tell me about your project..."
+            maxlength="1000"
+            required
+            [(ngModel)]="form.message"></textarea>
+    </div>
+
+
+    <!-- Submit -->
+    <button
+    type="submit"
+    class="my-btn pill w-full flex items-center justify-center gap-2
+           disabled:opacity-50 
+           disabled:cursor-not-allowed
+           disabled:bg-gray-400
+           disabled:text-gray-200"
+    [disabled]="contactForm.invalid || (isSending$ | async)">
+
+
+        @if(isSending$ | async) {
+
+            <svg
+                class="w-5 h-5 animate-spin"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24">
+
+                <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4">
+                </circle>
+
+                <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z">
+                </path>
+
+            </svg>
+
+            <span>Sending...</span>
+
+        } @else {
+
+            <span>Send Message</span>
+
+        }
+
+    </button>
+
+</form>
     </div>
 </section>
