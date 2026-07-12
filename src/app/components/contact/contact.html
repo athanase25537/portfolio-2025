@@ -40,16 +40,16 @@
     </h1>
 
     <!-- Message success -->
-    @if(successMessage) {
+    @if(successMessage$ | async) {
         <div class="mb-3 p-3 rounded bg-green-100 text-green-700 text-sm">
-            {{ successMessage }}
+            {{ successMessage$ | async}}
         </div>
     }
 
     <!-- Message error -->
-    @if(errorMessage) {
+    @if(errorMessage$ | async) {
         <div class="mb-3 p-3 rounded bg-red-100 text-red-700 text-sm">
-            {{ errorMessage }}
+            {{ errorMessage$ | async }}
         </div>
     }
 

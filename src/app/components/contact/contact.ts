@@ -21,8 +21,8 @@ export class Contact {
   isSending$ = new BehaviorSubject<boolean>(false);
 
 
-  successMessage = '';
-  errorMessage = '';
+  successMessage$ = new BehaviorSubject<string>("");
+  errorMessage$ = new BehaviorSubject<string>("");
 
 
   form = {
@@ -42,8 +42,8 @@ export class Contact {
     console.log("clicked")
     console.log(this.form.name)
     // Reset messages
-    this.successMessage = '';
-    this.errorMessage = '';
+    this.successMessage$.next("");
+    this.errorMessage$.next('');
 
 
     // Validation des champs vides
@@ -53,7 +53,7 @@ export class Contact {
       !this.form.message.trim()
     ) {
 
-      this.errorMessage = "Please fill in all fields.";
+      this.errorMessage$.next("Please fill in all fields.");
       return;
 
     }
@@ -64,8 +64,7 @@ export class Contact {
 
     if (!nameRegex.test(this.form.name)) {
 
-      this.errorMessage =
-        "Name can only contain letters, spaces, apostrophes or hyphens.";
+      this.errorMessage$.next("Name can only contain letters, spaces, apostrophes or hyphens.");
 
       return;
 
@@ -77,8 +76,7 @@ export class Contact {
 
     if (!emailRegex.test(this.form.email)) {
 
-      this.errorMessage =
-        "Please enter a valid email address.";
+      this.errorMessage$.next("Please enter a valid email address.");
 
       return;
 
@@ -88,8 +86,7 @@ export class Contact {
     // Validation message
     if (this.form.message.length < 10) {
 
-      this.errorMessage =
-        "Your message must contain at least 10 characters.";
+      this.errorMessage$.next("Your message must contain at least 10 characters.");
 
       return;
 
@@ -113,9 +110,7 @@ export class Contact {
     )
     .then(() => {
 
-
-      this.successMessage =
-        "Your message has been sent successfully. I will reply as soon as possible.";
+      this.successMessage$.next("Your message has been sent successfully. I will reply as soon as possible.");
 
 
       this.form = {
@@ -128,6 +123,9 @@ export class Contact {
 
       this.isSending$.next(false);
 
+      setTimeout(() => {
+        this.successMessage$.next("");
+      }, 3000);
 
     })
     .catch((error) => {
@@ -136,9 +134,11 @@ export class Contact {
       console.error("EmailJS error:", error);
 
 
-      this.errorMessage =
-        "Unable to send your message. Please try again later.";
+      this.errorMessage$.next("Unable to send your message. Please try again later.");
 
+      setTimeout(() => {
+        this.errorMessage$.next("");
+      }, 3000);
 
       this.isSending$.next(false);
 
