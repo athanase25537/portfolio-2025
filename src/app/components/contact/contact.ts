@@ -15,7 +15,7 @@ export class Contact {
 
   email: string = 'andriamasyathanase.nazy@gmail.com';
   phone: string = '038 32 217 44';
-  address: string = 'II M 45 ABC Androhibe Antananarivo';
+  address: string = 'Antananarivo';
 
 
   isSending$ = new BehaviorSubject<boolean>(false);
