@@ -15,7 +15,7 @@ export class PortfolioService {
       "AI-powered recruitment SaaS platform automating CV analysis, candidate matching, AI scoring, interview workflows, and recruitment management through a modern multi-agent architecture.",
       "https://github.com/Rakotoarinosy/AndaoHiasa",
       "https://andaohiasa.rakotoarinosy.com/",
-      ["FastAPI", "Angular", "PostgreSQL", "Docker", "MinIO", "Nginx", "n8n", "AI"],
+      ["FastAPI", "Angular", "PostgreSQL", "Docker", "MinIO", "Nginx", "n8n", "Gemini API"],
       "RAKOTOARINOSY Fehizoro",
       "https://rakotoarinosy.com/"
     ),
@@ -62,7 +62,7 @@ export class PortfolioService {
       "Comprehensive developer documentation explaining MVola API integration, authentication, payment workflows, request examples, and implementation best practices.",
       "https://github.com/athanase25537/mvolaapi",
       "https://mvolaapi.onrender.com/",
-      ["FastAPI", "Swagger", "REST API"]
+      ["Angular", "FastAPI", "Swagger", "REST API"]
     ),
 
     new cardPortfolioModel(
@@ -89,7 +89,7 @@ export class PortfolioService {
       "Interactive quiz application featuring multiple question categories, score tracking, responsive interfaces, and an engaging learning experience for every user.",
       "https://github.com/athanase25537/quiz",
       "",
-      ["HTML", "CSS", "JavaScript"]
+      ["PHP", "HTML", "CSS", "JavaScript"]
     )
   ];  
   getMyPortfolio(): cardPortfolioModel[] {
