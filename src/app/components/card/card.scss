@@ -2,7 +2,7 @@
     background: var(--panel);
     border: 1px solid var(--stroke);
     border-radius: 20px;
-    min-height: 250px;
+    min-height: 150px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: transform 0.2s ease, border 0.2s ease;
@@ -31,18 +31,18 @@
 
 @media screen and (max-width: 1121px) {
     .my-card {
-        min-height: 200px;
+        min-height: 180px;
     }
 }
 
 @media screen and (max-width: 991px) {
     .my-card {
-        min-height: 240px;
+        min-height: 130px;
     }
 }
 
 @media screen and (max-width: 537px) {
     .my-card {
-        min-height: 100px;
+        min-height: 150px;
     }
 }

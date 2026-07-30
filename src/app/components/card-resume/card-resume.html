@@ -1,12 +1,29 @@
-<div class="my-card py-3" [ngClass]="{'last': card().isLast}">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h1 class="fs-5 fw-bold m-0">{{ card().mention }}</h1>
-        @if(card().endYear == "") {
-            <span class="my-btn btn py-2 px-4 pill"><small>{{ card().startYear }}</small></span>
-        }@else {
-            <span class="my-btn btn py-2 px-4 pill"><small>{{ card().startYear }} - {{ card().endYear }}</small></span>
+<div 
+  class="my-card py-6 flex flex-col h-full border-b border-slate-200/60 dark:border-slate-800 transition-all duration-300 hover:border-indigo-500/30" 
+  [ngClass]="{'last': card().isLast, '!border-b-0': card().isLast}">
+  
+    <!-- En-tête : Mention + Période -->
+    <div class="flex flex-wrap sm:flex-nowrap justify-between items-start sm:items-center gap-3 mb-1">
+        <h3 class="text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white m-0 leading-snug">
+        {{ card().mention }}
+        </h3>
+        
+        <span class="my-btn btn pill inline-flex items-center justify-center py-1.5 px-3.5 text-xs font-semibold whitespace-nowrap shrink-0">
+        @if (card().endYear === '') {
+            <small>{{ card().startYear }}</small>
+        } @else {
+            <small>{{ card().startYear }} – {{ card().endYear }}</small>
         }
+        </span>
     </div>
-    <h2 class="fs-6 mb-3">{{ card().school | titlecase }}</h2>
-    <p>{{ card().description }}</p>
+
+  <!-- Établissement / École -->
+  <h4 class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-3 tracking-wide">
+    {{ card().school | titlecase }}
+  </h4>
+
+  <!-- Description -->
+  <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed m-0 mt-auto">
+    {{ card().description }}
+  </p>
 </div>

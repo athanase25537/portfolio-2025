@@ -44,20 +44,11 @@ export class Myresume {
 
   private experienceCards: CardResumeModel[] = [
     new CardResumeModel(
-      "Full-Stack Django",
-      "Feb 25",
-      "May 25",
-      "Freelance",
-      "Built an appointment and case-tracking management application for a lawyer.",
-      false
-    ),
-
-    new CardResumeModel(
-      "Full-Stack PHP",
-      "Jan 25",
-      "Apr 25",
-      "Fully remote",
-      "Real estate management platform (BailOnline): property creation, subscriptions, rent payments, and more.",
+      "Lead Backend Developer",
+      "Nov 25",
+      "Present",
+      "Oceantrade - Viseo Group",
+      "Leading backend development, designing REST APIs and real-time services with FastAPI, WebSocket, and RabbitMQ while mentoring interns.",
       false
     ),
 
@@ -66,7 +57,25 @@ export class Myresume {
       "Feb 25",
       "Jul 25",
       "Oceantrade - Viseo Group",
-      "Built APIs and maintained a CSMS application with real-time processing using WebSocket and RabbitMQ.",
+      "Developed and maintained a CSMS platform, built REST APIs with FastAPI, integrated RabbitMQ and the OCPP protocol, and optimized application performance.",
+      false
+    ),
+
+    new CardResumeModel(
+      "Full-Stack Django Developer",
+      "Feb 25",
+      "May 25",
+      "Freelance",
+      "Designed and developed a complete web application for appointment scheduling, case tracking, and real-time messaging using Django Channels.",
+      false
+    ),
+
+    new CardResumeModel(
+      "Full-Stack PHP Developer",
+      "Jan 25",
+      "Apr 25",
+      "Freelance",
+      "Developed a real estate management platform featuring property management, subscriptions, rent payments, and client administration.",
       false
     ),
 
@@ -75,7 +84,7 @@ export class Myresume {
       "Oct 21",
       "Nov 21",
       "Ingenosya Madagascar",
-      "Introduction to PHP and delivery of a mini project.",
+      "Learned PHP fundamentals and delivered a mini web application as part of the internship program.",
       false
     ),
   ];

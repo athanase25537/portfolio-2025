@@ -1,10 +1,21 @@
-<section id="services" class="section container services">
+<section id="services" class="py-16 sm:py-24 container mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- En-tête de section -->
+  <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-reveal>
     <h2 class="section-title" data-reveal>What I <span>Do</span></h2>
-    <div class="row services-grid">
-        @for(card of cards; track $index) {
-            <div class="col-4 mb-3" data-reveal [style.--delay]="($index * 0.08) + 's'">
-                <app-card [card]="card"/>
-            </div>
-        }
-    </div>
+    <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400">
+      Solutions sur-mesure et accompagnement pour concrétiser vos projets web.
+    </p>
+  </div>
+
+  <!-- Grille Responsive -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    @for (card of cards; track $index) {
+      <div 
+        class="h-full transition-transform duration-300 hover:-translate-y-1"
+        data-reveal 
+        [style.--delay]="($index * 0.08) + 's'">
+        <app-card [card]="card" class="h-full block" />
+      </div>
+    }
+  </div>
 </section>

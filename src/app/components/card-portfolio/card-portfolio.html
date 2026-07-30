@@ -1,19 +1,64 @@
-<div class="portfolio-card glass">
-    <div class="media">
-        <img [src]="card().imgUrl" alt="Project preview"/>
-        <div class="overlay"></div>
-    </div>
-    <div class="content">
-        <p>{{ card().description }}</p>
-        <div class="actions">
-            <a [href]="card().githubLink" class="btn" target="_blank">
-                <i class="fa-brands fa-github"></i>
-                Github
-            </a>
-            <a [href]="card().demoLink" class="btn" target="_blank">
-                <i class="fa-solid fa-play"></i>
-                Demo
-            </a>
+<div class="portfolio-card glass group relative flex flex-col h-full overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-xl">
+  
+  <!-- Zone Média (Image) -->
+  <div class="media relative aspect-video w-full overflow-hidden bg-slate-900">
+    <img 
+      [src]="card().imgUrl" 
+      alt="Project preview"
+      class="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+    />
+    <div class="overlay absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-40"></div>
+  </div>
+
+  <!-- Contenu -->
+  <div class="content flex flex-1 flex-col justify-between p-5 sm:p-6">
+    <div>
+      <!-- Titre de la carte -->
+      <h3 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white mb-2 group-hover:text-indigo-500 transition-colors">
+        {{ card().title }}
+      </h3>
+
+      <!-- Description -->
+      <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+        {{ card().description }}
+      </p>
+
+      <!-- Liste des Technologies (card().techs) -->
+      @if (card().techs && card().techs.length > 0) {
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          @for (tech of card().techs; track $index) {
+            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800/80 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/50">
+              {{ tech }}
+            </span>
+          }
         </div>
+      }
     </div>
+
+    <!-- Actions / Liens -->
+    <div class="actions flex items-center gap-3 pt-2 mt-auto">
+      @if (card().githubLink) {
+        <a 
+          [href]="card().githubLink" 
+          class="btn inline-flex flex-1 items-center justify-center gap-2 py-2.5 px-4 text-xs font-semibold rounded-xl transition-all duration-200" 
+          target="_blank"
+          rel="noopener noreferrer">
+          <i class="fa-brands fa-github text-sm"></i>
+          <span>Github</span>
+        </a>
+      }
+
+      @if (card().demoLink) {
+        <a 
+          [href]="card().demoLink" 
+          class="btn inline-flex flex-1 items-center justify-center gap-2 py-2.5 px-4 text-xs font-semibold rounded-xl transition-all duration-200" 
+          target="_blank"
+          rel="noopener noreferrer">
+          <i class="fa-solid fa-play text-xs"></i>
+          <span>Demo</span>
+        </a>
+      }
+    </div>
+  </div>
+
 </div>

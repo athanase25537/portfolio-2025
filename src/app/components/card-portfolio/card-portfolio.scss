@@ -4,6 +4,10 @@
     overflow: hidden;
     transition: transform 0.25s ease, border 0.25s ease;
 
+    h3 {
+        color: var(--accent);
+    }
+
     .media {
         position: relative;
         height: 180px;
@@ -32,7 +36,6 @@
 
         p {
             color: var(--muted);
-            margin: 0;
             line-height: 1.6;
         }
     }
