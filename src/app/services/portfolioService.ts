@@ -33,7 +33,7 @@ export class PortfolioService {
       "Modern e-commerce platform featuring product management, category navigation, responsive interfaces, customer-friendly shopping experience, and secure online order management.",
       "https://github.com/athanase25537/e-commerce",
       "https://my-shop-1yly.onrender.com/",
-      ["PHP", "MySQL", "Bootstrap", "JavaScript"]
+      ["Symfony", "PostgreSQL", "Tailwind", "JavaScript"]
     ),
 
     new cardPortfolioModel(
