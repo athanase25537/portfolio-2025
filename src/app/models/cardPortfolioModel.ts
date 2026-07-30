@@ -5,6 +5,8 @@ export class cardPortfolioModel {
         public description: string,
         public githubLink: string,
         public demoLink: string,
-        public techs: string[]
+        public techs: string[],
+        public collabName?: string,
+        public collabLink?: string
     ) {}
 }

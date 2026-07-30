@@ -15,7 +15,9 @@ export class PortfolioService {
       "AI-powered recruitment SaaS platform automating CV analysis, candidate matching, AI scoring, interview workflows, and recruitment management through a modern multi-agent architecture.",
       "https://github.com/Rakotoarinosy/AndaoHiasa",
       "https://andaohiasa.rakotoarinosy.com/",
-      ["FastAPI", "Angular", "PostgreSQL", "Docker", "MinIO", "Nginx", "n8n", "AI"]
+      ["FastAPI", "Angular", "PostgreSQL", "Docker", "MinIO", "Nginx", "n8n", "AI"],
+      "RAKOTOARINOSY Fehizoro",
+      "https://rakotoarinosy.com/"
     ),
 
     new cardPortfolioModel(
